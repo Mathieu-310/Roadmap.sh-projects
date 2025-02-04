@@ -10,3 +10,7 @@ Create a single-page HTML CV to showcase your career history
 </ul>
 
 The structure of your CV should be easily understandable and ready for styling in a future project.
+
+### Live Preview
+
+<a href="http://192.168.1.153:5500/01-single-page-cv/index.html">Single-Page-CV</a>
