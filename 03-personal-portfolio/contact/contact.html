@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Website | Contact</title>
+    <link rel="stylesheet" href="/03-personal-portfolio/stylesheet/contact.css">
+
+    <!-- SEO META TAGS -->
+    <meta name="description" content="Contact page of the basic HTML Website">
+    <meta name="keywords" content="HTML, CSS, contact page, frontend">
+    <meta name="author" content="AYIERA L Mathieu">
+
+    <!-- OPEN GRAPH META TAGS -->
+    <meta property="og:title" content="Contact web page">
+    <meta property="og:description" content="Contact page of the basic HTML Website">
+    <meta property="og:image"
+        content="https://unsplash.com/fr/illustrations/un-vieil-ordinateur-avec-une-souris-et-un-clavier-roPGTtmZZ5U">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://web.facebook.com/profile.php?id=100072158054952">
+
+</head>
+
+<body>
+
+    <header id="header" class="place-center flex-column flex-row">
+
+        <div class="logo">
+            <img src="/03-personal-portfolio/assets/WhatsApp Image 2025-02-01 at 10.25.01_81977598.jpg"
+                alt="MAYEL as logo">
+        </div>
+
+        <nav id="navbar">
+
+            <ul class="navitems">
+                <li class="navlink">
+                    <a href="/03-personal-portfolio/index.html">Home</a>
+                </li>
+                <li class="navlink">
+                    <a href="/03-personal-portfolio/projects/projects.html">
+                        Projects
+                    </a>
+                </li>
+                <li class="navlink">
+                    <a href="/03-personal-portfolio/articles/articles.html">
+                        Articles
+                    </a>
+                </li>
+                <li class="navlink">
+                    <a href="/03-personal-portfolio/contact/contact.html">
+                        Contact
+                    </a>
+                </li>
+            </ul>
+
+        </nav>
+
+        <h1>Aspiring Full Stack Developer</h1>
+        <p>HTML only with proper layout</p>
+
+    </header>
+
+    <main class="side-space">
+        <h2 class="secondary-title side-space">Contact us</h2>
+
+        <form action="/submit-form" method="post" class="side-space">
+
+            <fieldset>
+                <legend>Personal infos</legend>
+
+                <div class="form-group">
+                    <label for="username">Enter your full name</label>
+                    <input id="username" type="text" name="fullname" placeholder="eg: Jane Doe" required
+                        class="block-input">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Enter your email address</label>
+                    <input id="email" type="email" name="email" placeholder="example@gmail.com" required
+                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" class="block-input">
+                </div>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Why do you contact us ?</legend>
+
+                <div class="radio-group">
+                    <input id="purpose" type="radio" name="purpose" value="work" required>
+                    <label for="purpose">Work together</label>
+                </div>
+
+                <div class="radio-group">
+                    <input id="hiring" type="radio" name="purpose" value="hiring">
+                    <label for="hiring">Hiring</label>
+                </div>
+
+            </fieldset>
+
+            <div class="form-group message">
+                <label for="message" style="display: block;">
+                    Can you provide a little bit about this contact ?
+                </label>
+                <textarea id="message" name="message" minlength="10" maxlength="500"
+                    placeholder="Enter your text here..." aria-describedby="messageHelp" class="block-input" cols="25"
+                    rows="5"></textarea>
+                <small id="messageHelp" style="display: block;">
+                    (Minimum 10 caractères)
+                </small>
+            </div>
+
+            <button type="submit" class="btn side-space">Submit</button>
+        </form>
+    </main>
+
+    <footer class="foot">
+        <p>&copy; all righ reserved 2025</p>
+    </footer>
+</body>
+
+</html>
