@@ -1,0 +1,393 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* GOBAL STYLE */
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Genos", serif;
+    min-height: 100dvh;
+    background-color: #fafcfd;
+}
+
+header {
+    width: 100%;
+    text-align: center;
+}
+
+main {
+    text-align: center;
+    width: 95%;
+    margin-inline: auto;
+    padding: min(1rem, 3%);
+    margin-top: 5rem;
+}
+
+h1 {
+    font-size: clamp(2.5rem, calc(10vw + 1rem), 8.2rem);
+}
+
+p {
+    font-size: 1.199rem;
+}
+
+a {
+    display: inline-block;
+    font-size: clamp(1.2rem, calc(4vw + 0.5rem), 2rem);
+    text-decoration: none;
+    color: #313030;
+    background-color: #c1b9b7;
+    padding: 1rem;
+    margin-top: 2rem;
+    border-radius: 10px;
+    transition: 0.5s ease-out;
+    cursor: pointer;
+}
+
+/* UTLITIES */
+.container {
+    max-width: 800px;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    gap: min(2rem, 10%);
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin-bottom: 2rem;
+    word-wrap: break-word;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.flex-column-left {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    word-wrap: break-word;
+}
+
+.left-side {
+    color: #999292;
+    text-align: center;
+    width: 115px;
+    height: 269.6px;
+    position: relative;
+    left: -10px;
+}
+
+
+.left-side .p-container-left:last-of-type {
+    position: absolute;
+    bottom: 11px;
+}
+
+.left-side .p-container-left:nth-of-type(6) {
+    position: absolute;
+    bottom: 47px;
+}
+
+.left-side .p-container-left:nth-of-type(5) {
+    position: absolute;
+    bottom: 81px;
+}
+
+.left-side .p-container-left:nth-of-type(4) {
+    position: absolute;
+    top: 128px;
+}
+
+.left-side .p-container-left:nth-of-type(3) {
+    position: absolute;
+    top: 95px;
+}
+
+.left-side .p-container-left:nth-of-type(2) {
+    position: absolute;
+    top: 50px;
+}
+
+.left-side .p-container-left:nth-of-type(1) {
+    position: absolute;
+    top: 0px;
+}
+
+
+.middle {
+    position: absolute;
+    height: 120%;
+    border: solid 2px #c1b9b7;
+    left: 33%;
+}
+
+.right-side {
+    text-align: left;
+    word-wrap: break-word;
+    position: relative;
+    right: -10px;
+    height: 269.6px;
+}
+
+.p-container {
+    width: 100%;
+    height: 20%;
+}
+
+.p-container-left {
+    width: 100%;
+}
+
+.step {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #313030;
+    position: absolute;
+}
+
+.step.one {
+    top: 27px;
+    left: -4.5px;
+}
+
+.two {
+    top: 77px;
+    left: -4.5px;
+}
+
+.three {
+    top: 123px;
+    left: -4.5px;
+}
+
+.four {
+    top: 155px;
+    left: -4.5px;
+}
+
+.five {
+    bottom: 107px;
+    left: -4.5px;
+}
+
+.six {
+    bottom: 73px;
+    left: -4.5px;
+}
+
+.seveen {
+    bottom: 37px;
+    left: -4.5px;
+}
+
+a:is(:hover, :focus) {
+    background-color: #313030;
+    color: #fafcfd;
+    box-shadow: 2px 1px 5px 3px rgba(0, 0, 0, 0.1),
+        -2px -3px inset;
+}
+
+/* TABLET SCREENS */
+@media screen and (min-width: 768px) {
+    main {
+        width: 80%;
+    }
+
+    p {
+        font-size: 2.2rem;
+    }
+
+    .flex-row {
+        margin-inline: auto;
+        height: 350px;
+    }
+
+    .left-side {
+        width: 200px;
+        height: 350px;
+        left: -15px;
+    }
+
+    .right-side {
+        height: 350px;
+    }
+
+    .step.one {
+        top: 42px;
+        left: -4.5px;
+    }
+
+    .two {
+        top: 90px;
+        left: -4.5px;
+    }
+
+    .three {
+        top: 162px;
+        left: -4.5px;
+    }
+
+    .four {
+        top: 209px;
+        left: -4.5px;
+    }
+
+    .five {
+        bottom: 125px;
+        left: -4.5px;
+    }
+
+    .six {
+        bottom: 85px;
+        left: -4.5px;
+    }
+
+    .seveen {
+        bottom: 35px;
+        left: -4.5px;
+    }
+
+    .left-side .p-container-left:last-of-type {
+        position: absolute;
+        bottom: -6px;
+    }
+
+    .left-side .p-container-left:nth-of-type(6) {
+        position: absolute;
+        bottom: 40px;
+    }
+
+    .left-side .p-container-left:nth-of-type(5) {
+        position: absolute;
+        bottom: 85px;
+    }
+
+    .left-side .p-container-left:nth-of-type(4) {
+        position: absolute;
+        top: 169px;
+    }
+
+    .left-side .p-container-left:nth-of-type(3) {
+        position: absolute;
+        top: 119px;
+    }
+
+    .left-side .p-container-left:nth-of-type(2) {
+        position: absolute;
+        top: 52px;
+    }
+
+    .left-side .p-container-left:nth-of-type(1) {
+        position: absolute;
+        top: 0px;
+    }
+
+}
+
+/* LAPTO SCREENS */
+@media screen and (min-width: 1024px) {
+    main {
+        width: 80%;
+    }
+
+    p {
+        font-size: 2.5rem;
+    }
+
+    .flex-row {
+        margin-inline: auto;
+        height: 350px;
+    }
+
+    .left-side {
+        width: 200px;
+        height: 350px;
+        left: -15px;
+    }
+
+    .right-side {
+        height: 350px;
+    }
+
+    .step.one {
+        top: 40px;
+        left: -4.5px;
+    }
+
+    .two {
+        top: 99px;
+        left: -4.5px;
+    }
+
+    .three {
+        top: 150px;
+        left: -4.5px;
+    }
+
+    .four {
+        top: 200px;
+        left: -4.5px;
+    }
+
+    .five {
+        bottom: 147px;
+        left: -4.5px;
+    }
+
+    .six {
+        bottom: 100px;
+        left: -4.5px;
+    }
+
+    .seveen {
+        bottom: 45px;
+        left: -4.5px;
+    }
+
+    .left-side .p-container-left:last-of-type {
+        position: absolute;
+        bottom: 5px;
+    }
+
+    .left-side .p-container-left:nth-of-type(6) {
+        position: absolute;
+        bottom: 58px;
+    }
+
+    .left-side .p-container-left:nth-of-type(5) {
+        position: absolute;
+        bottom: 105px;
+    }
+
+    .left-side .p-container-left:nth-of-type(4) {
+        position: absolute;
+        top: 160px;
+    }
+
+    .left-side .p-container-left:nth-of-type(3) {
+        position: absolute;
+        top: 110px;
+    }
+
+    .left-side .p-container-left:nth-of-type(2) {
+        position: absolute;
+        top: 54px;
+    }
+
+    .left-side .p-container-left:nth-of-type(1) {
+        position: absolute;
+        top: 0px;
+    }
+
+}
