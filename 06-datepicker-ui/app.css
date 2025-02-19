@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    --s: 55px;
+    /* control the size*/
+    --c1: #774f38;
+    --c2: #e5d6c2;
+
+    --g: conic-gradient(at 90% 40%, #0000 75%, var(--c1) 0);
+    background: var(--g), var(--g) var(--s) var(--s) var(--c2);
+    background-size: calc(2*var(--s)) calc(2*var(--s));
+}
+
+body {
+    font-size: clamp(1rem, calc(4vw + 0.5rem), 1.25rem);
+    min-height: 100vh;
+    align-content: center;
+}
+
+main {
+    background-color: #f0f8ffde;
+    margin-inline: auto;
+    max-width: 20rem;
+    padding: 1rem;
+}
+
+form {
+    margin-inline: auto;
+    margin-bottom: 5px;
+    max-width: 90%;
+    border: #000000 solid 1px;
+}
+
+input {
+    display: inline-block;
+    width: 88%;
+    padding: min(0.5rem, 5%);
+}
+
+input:focus {
+    outline: blue dotted;
+}
+
+button {
+    border: none;
+    background-color: unset;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+table {
+    max-width: 90%;
+    margin-inline: auto;
+    border-collapse: collapse;
+    border: 1px solid;
+}
+
+th {
+    padding: 10px;
+}
+
+tr i:first-of-type {
+    transform: rotate(180deg);
+    width: 50px;
+
+}
+
+tr i:nth-of-type(2) {
+    width: 50px;
+
+}
+
+.date-table td {
+    width: 3.75rem;
+    height: 2.5rem;
+    text-align: center;
+    border: 1px solid;
+}
+
+tr:nth-of-type(2) td {
+    border: none;
+}
