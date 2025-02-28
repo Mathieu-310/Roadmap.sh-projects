@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessible Form UI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+
+        <div class="user-data">
+
+            <form action="#" method="post" aria-label="Sign In Form">
+
+                <div class="user-name">
+                    <label for="fname">Full name</label>
+                    <input id="fname" type="text" placeholder="What should we call you?" name="fname" required
+                        aria-required="true">
+                </div>
+
+                <div class="user-email">
+                    <label for="mail">Email</label>
+                    <input id="mail" type="email" name="mail" required aria-required="true"
+                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" aria-describedby="email-error">
+                    <img src="assets/mail.svg" alt="mail icon" class="mail-icon">
+                    <div id="email-error" class="error hidden" aria-live="polite">
+                        <img src="assets/error.svg" alt="error-icon">
+                        <p>Please enter a valid email address.</p>
+                    </div>
+                </div>
+
+                <div class="user-secret-data">
+                    <label for="password">Enter Password</label>
+                    <input id="password" type="password" placeholder="xxxxxxxx" name="password" required minlength="8"
+                        aria-required="true" aria-describedby="password-error">
+                    <button type="button" id="toggle-password" aria-label="Show password" aria-pressed="false"
+                        tabindex="0">
+                        <img src="assets/visibility.svg" alt="visibility">
+                    </button>
+                    <div id="password-error" class="error hidden" aria-live="polite">
+                        <img src="assets/error.svg" alt="error-icon">
+                        Please enter your password.
+                    </div>
+
+                    <label for="checked">Confirm Password</label>
+                    <input id="checked" type="password" placeholder="xxxxxxxx" name="checked-password" required
+                        minlength="8" aria-required="true" aria-describedby="password-confirm">
+                    <button type="button" id="toggle-password" aria-label="Show password" aria-pressed="false"
+                        tabindex="0">
+                        <img src="assets/visibility.svg" alt="visibility">
+                    </button>
+                    <div id="password-confirm" class="error hidden" aria-live="polite">
+                        <img src="assets/error.svg" alt="error-icon">
+                        Please Confirm your password.
+                    </div>
+
+                </div>
+                <button type="submit">Update Profile</button>
+            </form>
+
+            <div role="region" aria-label="Profile completeness section" class="progress-bar"
+                aria-describedby="progress-step">
+                <div class="progress" id="progress-step">
+                    <span>65%</span>
+                </div>
+                <p>Profile Completeness</p>
+
+                <div class="checklist">
+                    <div>
+                        <img src="assets/verified_user.svg" alt="account icon">
+                        <p>Create Account</p>
+                    </div>
+                    <div>
+                        <img src="assets/work_history.svg" alt="Update icon">
+                        <p>Update Roadmap Progress</p>
+                    </div>
+                    <div>
+                        <img src="assets/set public profil.svg" alt="profile-secting icon">
+                        <p>Set Up Public Profile</p>
+                    </div>
+                    <div>
+                        <img src="assets/start-project.svg" alt="projct-icon">
+                        <p>Complete Your First project</p>
+                    </div>
+                    <div>
+                        <img src="assets/group_add.svg" alt="Invite-icon">
+                        <p>Invite Friends</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
